@@ -141,14 +141,14 @@
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
- <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_ScaldingBurstSTNL</defName>
 	<label>Scalding Strike</label>
 	<description>Inflict a burn on the target by skipping boiling water directly onto them.</description>
 	<iconPath>UI_HydromancerSTNL/Abilities/Scalding</iconPath>
 	<abilityClass>VPE_Hydromancer.Ability_ScaldingBurst</abilityClass>
-	<castTime>60</castTime>
-	<range>14.9</range>
+	<castTime>15</castTime>
+	<range>22.9</range>
 	<targetMode>Pawn</targetMode>
 	<targetingParameters>
 		<canTargetLocations>false</canTargetLocations>
@@ -166,22 +166,21 @@
 			<path>VPE_HydromancerSTNL</path>
 			<level>2</level>
 			<order>3</order>
-			<psyfocusCost>0.05</psyfocusCost>
+			<psyfocusCost>0.02</psyfocusCost>
 			<entropyGain>15</entropyGain>
 			<prerequisites>
-			<li>VPE_SaltWoundsSTNL</li>
+				<li>VPE_SaltWoundsSTNL</li>
 			</prerequisites>
 		</li>
-<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
-	<effecterDef>Watersplash_MidSTNL</effecterDef>
-	<maintainForTicks>60</maintainForTicks>
-	<scale>1</scale>
-</li>
-
-<li Class="VEF.Abilities.AbilityExtension_FleckOnTarget">
-	<fleckDef>WaterskipSplashParticles</fleckDef>
-	<scale>1</scale>
-</li>
+		<li Class="VEF.Abilities.AbilityExtension_EffecterOnTarget">
+			<effecterDef>Watersplash_MidSTNL</effecterDef>
+			<maintainForTicks>60</maintainForTicks>
+			<scale>1</scale>
+		</li>
+		<li Class="VEF.Abilities.AbilityExtension_FleckOnTarget">
+			<fleckDef>WaterskipSplashParticles</fleckDef>
+			<scale>1</scale>
+		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>
 
@@ -190,16 +189,20 @@
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_HydromancerLaceraquaSTNL</defName>
 	<label>Laceraqua</label>
-	<description>Convert the water present inside of the targets into razor-sharp blades, these blades will cause internal bleeding within the affected creatures over time.</description>
+	<description>Convert the water present inside of the targets into razor-sharp blades, these blades will cause internal bleeding within the affected creatures over time.\n\nRadius and duration scale with psychic sensitivity.</description>
 	<iconPath>UI_HydromancerSTNL/Abilities/Laceraqua</iconPath>
 	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
-	<castTime>120</castTime>
+	<castTime>30</castTime>
 	<durationTime>1200</durationTime>
 	<durationTimeStatFactors>
 		<PsychicSensitivity>1</PsychicSensitivity>
 	</durationTimeStatFactors>
-	<range>14.9</range>
+	<range>17.9</range>
 	<radius>1.5</radius>
+	<maxRadius>3.9</maxRadius>
+	<radiusStatFactors>
+		<PsychicSensitivity>1</PsychicSensitivity>
+	</radiusStatFactors>
 	<hasAoE>True</hasAoE>
 	<chance>0</chance>
 	<targetMode>Location</targetMode>
@@ -228,7 +231,7 @@
 			<path>VPE_HydromancerSTNL</path>
 			<level>3</level>
 			<order>3</order>
-			<psyfocusCost>0.15</psyfocusCost>
+			<psyfocusCost>0.07</psyfocusCost>
 			<entropyGain>30</entropyGain>
 			<prerequisites>
 				<li>VPE_ScaldingBurstSTNL</li>
