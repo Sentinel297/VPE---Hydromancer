@@ -152,4 +152,32 @@
 
 </HediffDef>
 
+<HediffDef>
+	<defName>VPE_Hydromancer_Drenched_STNL</defName>
+	<label>Drenched</label>
+	<description>This creature is exposed to heavy rain and cannot be set on fire.</description>
+	<defaultLabelColor>(0, 1, 1)</defaultLabelColor>
+	<hediffClass>HediffWithComps</hediffClass>
+	<initialSeverity>1</initialSeverity>
+	<makesSickThought>False</makesSickThought>
+	<scenarioCanAdd>false</scenarioCanAdd>
+	<isBad>False</isBad>
+	<everCurableByItem>false</everCurableByItem>
+	<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+	<stages>
+		<li>
+			<statFactors>
+				<Flammability>0</Flammability>
+			</statFactors>
+		</li>
+	</stages>
+	<comps>
+		<li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>600</disappearsAfterTicks>
+			<showRemainingTime>True</showRemainingTime>
+		</li>
+		<li Class="HediffCompProperties_DisappearsOnDeath"/>
+	</comps>
+</HediffDef>
+
 </Defs>

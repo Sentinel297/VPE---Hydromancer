@@ -388,14 +388,18 @@
 <VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 	<defName>VPE_TorrentialRainSTNL</defName>
 	<label>Torrential Rain</label>
-	<description>Warp a distant storm towards your location, the rain will cause floods and put out fires while also reducing the movement speed of creatures that aren't under a roof.</description>
+	<description>Warp a distant storm towards your location, the rain will cause floods and put out fires while also reducing the movement speed of creatures that aren't under a roof.\n\nCreatures affected by this condition will be unable to be set on fire.</description>
 	<iconPath>UI_HydromancerSTNL/Abilities/Torrent</iconPath>
-	<abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
-	<castTime>600</castTime>
+	<abilityClass>SentinelFramework_STNL.Ability_ForceCondition</abilityClass>
+	<castTime>180</castTime>
 	<durationTime>60000</durationTime>
-	<chance>0</chance>
+	<durationTimeStatFactors>
+	<PsychicSensitivity>1</PsychicSensitivity>
+	</durationTimeStatFactors>
+	<!-- <chance>0</chance> -->
 	<targetMode>Self</targetMode>
 	<castSound>Psycast_Neuroquake_Effect</castSound>
+		<needsTicking>true</needsTicking>
 	<showUndrafted>true</showUndrafted>
 	<modExtensions>
 		<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
@@ -405,13 +409,15 @@
 			<psyfocusCost>0.5</psyfocusCost>
 			<entropyGain>60</entropyGain>
 			<prerequisites>
-			<li>VPE_HydromancerVortexSTNL</li>
-	<li>VPE_PurifyingTideSTNL</li>
-</prerequisites>
+				<li>VPE_HydromancerVortexSTNL</li>
+				<li>VPE_PurifyingTideSTNL</li>
+			</prerequisites>
 		</li>
-		<li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
-			<gameCondition>TorrentialRainSTNL</gameCondition>
-			<durationDays>1</durationDays>
+		<li Class="SentinelFramework_STNL.AbilityForceCondiExt">
+			<conditionDef>TorrentialRainSTNL</conditionDef>
+			<global>false</global>
+			<scaleDuraWithSensi>True</scaleDuraWithSensi>
+			<aiCanUse>true</aiCanUse>
 		</li>
 	</modExtensions>
 </VEF.Abilities.AbilityDef>  
