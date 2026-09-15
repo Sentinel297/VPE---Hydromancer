@@ -10,10 +10,10 @@
 			<packageId>Ludeon.RimWorld.Royalty</packageId>
 			<displayName>Royalty</displayName>
 		</li>
-		<li>
-			<packageId>Ludeon.RimWorld.Odyssey</packageId>
-			<displayName>Odyssey</displayName>
-		</li>
+		<!-- <li> -->
+			<!-- <packageId>Ludeon.RimWorld.Odyssey</packageId> -->
+			<!-- <displayName>Odyssey</displayName> -->
+		<!-- </li> -->
 		<li>
 			<packageId>VPE.Framework.Sentinel</packageId>
 			<displayName>VPE - Sentinel Framework</displayName>

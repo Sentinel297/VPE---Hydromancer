@@ -18,4 +18,7 @@
 	<HydrendOneShotGearSTNL>Hydrend Always One Shots Apparel?</HydrendOneShotGearSTNL>
 	<HydrendOneShotGearDescSTNL>Hydrend won't scale with psychic sensitivity and will always destroy apparel in one cast if this is checked.</HydrendOneShotGearDescSTNL>
 	<HydrendTresholdToBreakSTNL>Psychic Sensitivity Required To One Shot Apparel: {0}</HydrendTresholdToBreakSTNL>
+	<!-- Torrential Rain -->
+	<VPE_Hydromancer_TorrentialRain_STNL>Torrential Rain</VPE_Hydromancer_TorrentialRain_STNL>
+	<VPE_Hydromancer_RainCausesFlooding_STNL>Should unroofed cells outside of the home area turn into shallow water over time?</VPE_Hydromancer_RainCausesFlooding_STNL>
 </LanguageData>

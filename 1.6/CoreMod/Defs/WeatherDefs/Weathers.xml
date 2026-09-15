@@ -4,7 +4,7 @@
     <defName>TorrentialRainSTNL</defName>
     <label>torrential rain</label>
     <description>Torrential rain causes flooding. It also reduces the accuracy of ranged weapons, extinguishes fire, and slows people down.</description>
-    <workerClass>WeatherWorker_TorrentialRain</workerClass>
+    <!-- <workerClass>WeatherWorker_TorrentialRain</workerClass> -->
     <temperatureRange>0~100</temperatureRange>
     <windSpeedFactor>1.5</windSpeedFactor>
     <accuracyMultiplier>0.75</accuracyMultiplier>
