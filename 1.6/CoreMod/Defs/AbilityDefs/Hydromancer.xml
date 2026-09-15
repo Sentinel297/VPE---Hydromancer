@@ -14,6 +14,7 @@
 		<radiusStatFactors>
 			<PsychicSensitivity>1</PsychicSensitivity>
 		</radiusStatFactors>
+		<maxRadius>50.9</maxRadius>
 		<hasAoE>false</hasAoE>
 		<chance>0</chance>
 		<targetMode>Location</targetMode>
@@ -286,7 +287,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_PurifyingTideSTNL</defName>
 		<label>Purifying tide</label>
-		<description>Purify the target of diseases and infections by purging their body of foreign bacteria.</description>
+		<description>Purify the target of diseases and infections by purging their body of foreign bacteria.\nThis ability may cure blighted crops.</description>
 		<iconPath>UI_HydromancerSTNL/Abilities/Ability_PurifyingTide</iconPath>
 		<abilityClass>VPE_Hydromancer.Ability_PurifyingTide</abilityClass>
 		<chance>0</chance>
@@ -330,7 +331,7 @@
 	<VEF.Abilities.AbilityDef ParentName="VPE_PsycastBase">
 		<defName>VPE_Hydromancer_SunkenProwl_Ability_STNL</defName>
 		<label>Sunken prowl</label>
-		<description>Passive upgrade: Unlocking this ability will automatically apply its effects.\n\nWhile touching water, a field of psychic energy will form around the user, granting increased movement speed until contact ceases.\n\nAdditionally, while standing on water or under rain, this energy field will conceal the user through light refraction.\n\nThis process requires focus to upkeep, which will steadily drain neural heat as long as it is active.</description>
+		<description>Passive upgrade: Unlocking this ability will automatically apply its effects.\n\nWhile touching water, a field of psychic energy will form around the user, granting increased movement speed and negating movement penalties from non-deep water terrain until contact ceases.\n\nAdditionally, while standing on water or under rain, this energy field will conceal the user through light refraction.\n\nThis process requires focus to upkeep, which will steadily drain neural heat as long as it is active.</description>
 		<iconPath>UI_HydromancerSTNL/Abilities/Ability_SunkenProwl</iconPath>
 		<abilityClass>SentinelFramework_STNL.Ability_PassiveGiver</abilityClass>
 		<castTime>30</castTime>
